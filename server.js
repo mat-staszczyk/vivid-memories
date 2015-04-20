@@ -13,7 +13,10 @@ app.use(express.static(__dirname + '/public'));
 app.set('view engine', 'ejs');
 
 // configure instagram app with client-id
-
+ig.use({
+  client_id: 'b6431977aa074e5b85f698b334071dc8',
+  client_secret: '9b99fc7910994c44b8c957fc48a89324'
+});
 
 // SET THE ROUTES
 // ==================================================
@@ -22,8 +25,10 @@ app.set('view engine', 'ejs');
 app.get('/', function(req, res) {
 
 	// use the instagram package to get popular media
+	ig.media_popular(function(err, medias, remaining, limit) {
 	// render the home page and pass in the popular images
-	res.render('pages/index');
+		res.render('pages/index', { grams: medias });
+	});
 
 });
 
