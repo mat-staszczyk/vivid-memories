@@ -1,0 +1,28 @@
+{
+  "name": "insta-grabber",
+  "version": "1.0.0",
+  "description": "App that let you to view Instagram popular photos",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sleaz0id/insta-grabber.git"
+  },
+  "keywords": [
+    "Instagram",
+    "grabber"
+  ],
+  "author": "scotch.io, Mateusz Staszczyk",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sleaz0id/insta-grabber/issues"
+  },
+  "homepage": "https://github.com/sleaz0id/insta-grabber#readme",
+  "dependencies": {
+    "ejs": "^2.3.1",
+    "express": "^4.12.3",
+    "instagram-node": "^0.5.7"
+  }
+}
