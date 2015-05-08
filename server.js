@@ -7,6 +7,7 @@ var ig      = require('instagram-node').instagram();
 // CONFIGURE THE APP
 // ==================================================
 // tell node where to look for sire resoures
+app.set('port', (process.env.PORT || 5000));
 app.use(express.static(__dirname + '/public'));
 
 // set the view engine to ejs
@@ -34,5 +35,6 @@ app.get('/', function(req, res) {
 
 // START THE SERVER
 // ==================================================
-app.listen(8080);
-console.log('App started! Look at http://localhost:8080');
+app.listen(app.get('port'), function() {
+  console.log('Node app is running on port', app.get('port'));
+});
