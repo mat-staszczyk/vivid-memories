@@ -1,4 +1,4 @@
-# insta-grabber
+# Vivid Memories
 
 Simple and smart node app which use Instagram API and grabs popular pictures. 
 
